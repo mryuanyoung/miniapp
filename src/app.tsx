@@ -24,19 +24,53 @@ class App extends Component {
    * 对于像 navigationBarTextStyle: 'black' 这样的推导出的类型是 string
    * 提示和声明 navigationBarTextStyle: 'black' | 'white' 类型冲突, 需要显示声明类型
    */
+
+
+  componentDidMount () {}
+
   config: Config = {
     pages: [
-      'pages/index/index'
+      'pages/index/index',
+      'pages/interv/index',
+      'pages/discuss/index',
+      'pages/rent/index',
+      'pages/person/index'
     ],
     window: {
       backgroundTextStyle: 'light',
       navigationBarBackgroundColor: '#fff',
       navigationBarTitleText: 'WeChat',
       navigationBarTextStyle: 'black'
+    },
+    tabBar: {
+      color: '#eeeeee',
+      selectedColor: '#333333',
+      backgroundColor: '#ffffff',
+      borderStyle: 'black',
+      list: [
+        {
+          pagePath: 'pages/index/index',
+          text: '内推'
+        },
+        {
+          pagePath: 'pages/interv/index',
+          text: '面经'
+        },
+        {
+          pagePath: 'pages/discuss/index',
+          text: '交流'
+        },
+        {
+          pagePath: 'pages/rent/index',
+          text: '租房'
+        },
+        {
+          pagePath: 'pages/person/index',
+          text: '个人'
+        },
+      ]
     }
   }
-
-  componentDidMount () {}
 
   componentDidShow () {}
 
